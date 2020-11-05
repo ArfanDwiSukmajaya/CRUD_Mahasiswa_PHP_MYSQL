@@ -11,7 +11,7 @@
   //   echo "Databse $db berhasil di akses";
   // }
 
-  $result = mysqli_query($kon, "SELECT * FROM  mahasiswa");
-  $mhs = mysqli_fetch_row($result);
+  // $result = mysqli_query($kon, "SELECT * FROM  mahasiswa");
+  // $mhs = mysqli_fetch_row($result);
 
 ?>

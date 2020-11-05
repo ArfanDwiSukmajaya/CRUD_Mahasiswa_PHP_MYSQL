@@ -51,7 +51,7 @@
 
 <?php 
 
-  if($_POST["simpan"]){
+  if(isset($_POST["simpan"])){
 
     include "koneksi.php";
 
@@ -62,9 +62,22 @@
       move_uploaded_file($lokfoto, "foto/$nmfoto");
     }
 
-    $sql = "INSERT INTO mahasiswa (nobp, nama, kelas, tmplahir, tgllahir, Jk, alamaat, hp, email, foto, tglsimpan) VALUES ('$_POST[nobp]', '$_POST[nama]', '$_POST[kelas]', '$_POST[tmplahir]','$_POST[tgllahir]', '$_POST[jk]', '$_POST[alamat]', '$_POST[hp]', '$_POST[email]', '$nmfoto', NOW() )";
+    $nobp = $_POST["nobp"];
+    $nama = $_POST["nama"];
+    $kelas = $_POST["kelas"];
+    $tmplahir = $_POST["tmplahir"];
+    $tgllahir = $_POST["tgllahir"];
+    $jk = $_POST["jk"];
+    $alamat = $_POST["alamat"];
+    $hp = $_POST["hp"];
+    $email = $_POST["email"];
+    var_dump($nobp, $nama, $kelas, $tmplahir, $tgllahir, $jk, $alamat, $hp, $email, $lokfoto );
+
+    $sql = "INSERT INTO mahasiswa (nobp, nama, kelas, tmplahir, tgllahir, jk, alamat, hp, email, foto, tglsimpan) VALUES ('$_POST[nobp]', '$_POST[nama]', '$_POST[kelas]', '$_POST[tmplahir]','$_POST[tgllahir]', '$_POST[jk]', '$_POST[alamat]', '$_POST[hp]', '$_POST[email]', '$nmfoto', NOW() )";
 
     $sqlm = mysqli_query($kon,$sql);
+
+    var_dump($sqlm);
 
     if($sqlm){
       echo "Data Mahasiswa Berhasil disimpan";

@@ -1,7 +1,4 @@
-<?php 
-
-  include 'koneksi.php';
-  
+<?php   
   echo "<br>";
   echo "<a href='?p=mhsadd'>Tambah Data Mahasiswa</a>";
   echo "<br>";
