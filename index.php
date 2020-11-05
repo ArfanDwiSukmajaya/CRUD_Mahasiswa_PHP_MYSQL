@@ -11,11 +11,11 @@
 
     include "koneksi.php";
 
-    if($_GET["p"] == "mhsadd"){
+    if(isset($_GET["p"]) == "mhsadd"){
       include "mhsadd.php";
-    }else if($_GET["p"] == "mhsedit"){
+    }else if(isset($_GET["p"]) == "mhsedit"){
       include "mhsedit.php";
-    }else if($_GET["p"] == "mhsdel"){
+    }else if(isset($_GET["p"]) == "mhsdel"){
       include "mhsdel.php";
     }else{
       include "mhs.php";

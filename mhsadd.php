@@ -71,9 +71,13 @@
     $alamat = $_POST["alamat"];
     $hp = $_POST["hp"];
     $email = $_POST["email"];
-    var_dump($nobp, $nama, $kelas, $tmplahir, $tgllahir, $jk, $alamat, $hp, $email, $lokfoto );
+    // var_dump($nobp, $nama, $kelas, $tmplahir, $tgllahir, $jk, $alamat, $hp, $email, $lokfoto );
 
-    $sql = "INSERT INTO mahasiswa (nobp, nama, kelas, tmplahir, tgllahir, jk, alamat, hp, email, foto, tglsimpan) VALUES ('$_POST[nobp]', '$_POST[nama]', '$_POST[kelas]', '$_POST[tmplahir]','$_POST[tgllahir]', '$_POST[jk]', '$_POST[alamat]', '$_POST[hp]', '$_POST[email]', '$nmfoto', NOW() )";
+    // $sql = "INSERT INTO mahasiswa (nobp, nama, kelas, tmplahir, tgllahir, jk, alamat, hp, email, foto, tglsimpan) VALUES ('$_POST[nobp]', '$_POST[nama]', '$_POST[kelas]', '$_POST[tmplahir]','$_POST[tgllahir]', '$_POST[jk]', '$_POST[alamat]', '$_POST[hp]', '$_POST[email]', '$nmfoto', NOW() )";
+
+    $sql = "INSERT INTO mahasiswa (nobp, nama, kelas, tmplahir, tgllahir, jk, alamat, hp, email, foto, tglsimpan) VALUES('$nobp', '$nama', '$kelas', '$tmplahir', '$tgllahir', '$jk', '$alamat', '$hp', '$email', '$nmfoto', NOW())";
+
+
 
     $sqlm = mysqli_query($kon,$sql);
 
@@ -85,7 +89,7 @@
       "Gagal Menyimpan";
     }
 
-    // echo "<META HTTP-EQUIV='Refresh', Content='1'; URL=?p=mhs>";
+    echo "<META HTTP-EQUIV='Refresh' Content='1; URL=mhs.php'>";
     
   }
 
