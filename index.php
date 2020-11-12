@@ -11,11 +11,21 @@
 
     include "koneksi.php";
 
-    if(isset($_GET["p"]) == "mhsadd"){
+    // if(isset($_GET["p"]) == "mhsadd"){
+    //   include "mhsadd.php";
+    // }else if(isset($_GET["p"]) == "mhsedit"){
+    //   include "mhsedit.php";
+    // }else if(isset($_GET["p"]) == "mhsdel"){
+    //   include "mhsdel.php";
+    // }else{
+    //   include "mhs.php";
+    // }
+
+    if($_GET["p"] == "mhsadd"){
       include "mhsadd.php";
-    }else if(isset($_GET["p"]) == "mhsedit"){
+    }else if($_GET["p"] == "mhsedit"){
       include "mhsedit.php";
-    }else if(isset($_GET["p"]) == "mhsdel"){
+    }else if($_GET["p"] == "mhsdel"){
       include "mhsdel.php";
     }else{
       include "mhs.php";

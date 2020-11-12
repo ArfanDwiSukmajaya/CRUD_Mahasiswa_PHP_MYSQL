@@ -2,8 +2,8 @@
 
   include "koneksi.php";
   echo "<br>";
-  // echo "<a href='?p=mhsadd'>Tambah Data Mahasiswa</a>";
-  echo "<a href='mhsadd.php'>Tambah Data Mahasiswa</a>";
+  // echo "<a href='mhsadd.php'>Tambah Data Mahasiswa</a>";
+  echo "<a href='?p=mhsadd'>Tambah Data Mahasiswa</a>";
   echo "<br>";
   echo "<br>";
   echo "
